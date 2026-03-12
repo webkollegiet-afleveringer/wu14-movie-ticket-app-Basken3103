@@ -3,7 +3,7 @@ function Seats() {
   return (
     <>
 
-     <h1>Seats Page</h1>
+     <h1>Select Seats</h1>
       
     </>
   )

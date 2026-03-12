@@ -3,7 +3,7 @@ function Details() {
   return (
     <>
 
-     <h1>Details Page</h1>
+     <h1>Details Movie</h1>
       
     </>
   )
