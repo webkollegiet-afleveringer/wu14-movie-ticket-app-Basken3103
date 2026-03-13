@@ -1,0 +1,4 @@
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmYzY4MDg4NDA4ODhkZGYyNjljNWQyMTY1MzMzMDc1NCIsIm5iZiI6MTc1NzkyMDczNS43MTI5OTk4LCJzdWIiOiI2OGM3YmRkZjVmZjZiYzk1NjI3MGQ2YjEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.A7UkCv2KCyz3gLnTDPvH_Z5j_frCF3tOFFHY5VnTglY
+
+
+fetch("https://api.themoviedb.org/3/movie/now_playing")
