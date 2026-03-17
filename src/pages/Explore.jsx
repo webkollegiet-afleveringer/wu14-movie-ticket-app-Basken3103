@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
+
 function Explore() {
-  const [movies, setMovies] = useState([]);
+  const [topMovies, setTopMovies] = useState([]);
+  const [recommendedMovies, setRecommendedMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -12,7 +14,17 @@ function Explore() {
   useEffect(() => {
     async function fetchMovies() {
       try {
-        const response = await fetch(
+        const topResponse = await fetch(
+          "https://api.themoviedb.org/3/movie/now_playing",
+          {
+            headers: {
+              accept: "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+
+        const recommendedResponse = await fetch(
           "https://api.themoviedb.org/3/movie/top_rated",
           {
             headers: {
@@ -20,14 +32,18 @@ function Explore() {
               Authorization: `Bearer ${token}`,
             },
           }
-        )
+        );
 
-        if (!response.ok) {
+
+        if (!topResponse.ok || !recommendedResponse.ok) {
           throw new Error("Kunne ikke hente film");
         }
 
-        const data = await response.json();
-        setMovies(data.results);
+        const topData = await topResponse.json();
+        const recommendedData = await recommendedResponse.json();
+
+        setTopMovies(topData.results);
+        setRecommendedMovies(recommendedData.results);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -45,16 +61,34 @@ function Explore() {
     <section>
       <h1>Explore Movie</h1>
 
-      {movies.map((movie) => (
-        <article key={movie.id}>
-          <img
-            src={`${baseImgUrl}${movie.poster_path}`}
-            alt={movie.title}
-            style={{ width: "200px" }}
-          />
-          <h2>{movie.title}</h2>
-        </article>
-      ))}
+      <div>
+        <h2>Top Movies</h2>
+        {topMovies.slice(0, 2).map((movie) => (
+          <article key={movie.id}>
+            <img
+              src={`${baseImgUrl}${movie.poster_path}`}
+              alt={movie.title}
+              style={{ width: "200px" }}
+            />
+            <h3>{movie.title}</h3>
+          </article>
+        ))}
+      </div>
+
+      <div>
+        <h2>Recommended</h2>
+        <div style={{ display: "flex", gap: "12px", overflowX: "auto" }}>
+          {recommendedMovies.slice(0, 4).map((movie) => (
+            <article key={movie.id}>
+              <img
+                src={`${baseImgUrl}${movie.poster_path}`}
+                alt={movie.title}
+                style={{ width: "120px", borderRadius: "12px" }}
+              />
+            </article>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
