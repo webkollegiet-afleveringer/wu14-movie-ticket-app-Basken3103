@@ -13,7 +13,7 @@ function Explore() {
     async function fetchMovies() {
       try {
         const response = await fetch(
-          "https://api.themoviedb.org/3/movie/now_playing",
+          "https://api.themoviedb.org/3/movie/top_rated",
           {
             headers: {
               accept: "application/json",
