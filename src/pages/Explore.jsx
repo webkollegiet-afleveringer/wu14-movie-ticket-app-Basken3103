@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 
+
 function Explore() {
   const [topMovies, setTopMovies] = useState([]);
   const [recommendedMovies, setRecommendedMovies] = useState([]);
@@ -14,25 +15,20 @@ function Explore() {
   useEffect(() => {
     async function fetchMovies() {
       try {
-        const topResponse = await fetch(
-          "https://api.themoviedb.org/3/movie/now_playing",
-          {
+        const [topResponse, recommendedResponse] = await Promise.all([
+          fetch("https://api.themoviedb.org/3/movie/now_playing", {
             headers: {
               accept: "application/json",
               Authorization: `Bearer ${token}`,
             },
-          }
-        );
-
-        const recommendedResponse = await fetch(
-          "https://api.themoviedb.org/3/movie/top_rated",
-          {
+          }),
+          fetch("https://api.themoviedb.org/3/movie/top_rated", {
             headers: {
               accept: "application/json",
               Authorization: `Bearer ${token}`,
             },
-          }
-        );
+          }),
+        ]);
 
 
         if (!topResponse.ok || !recommendedResponse.ok) {
