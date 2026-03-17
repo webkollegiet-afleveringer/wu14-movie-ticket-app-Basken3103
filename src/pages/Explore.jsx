@@ -5,7 +5,8 @@ function Explore() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const token = import.meta.env.VITE_TMDB_TOKEN;
+  const token = import.meta.env.VITE_TMDB_TOKEN
+  console.log("TMDB Token:", token); // Debugging: Check if the token is loaded correctly
   const baseImgUrl = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
@@ -19,7 +20,7 @@ function Explore() {
               Authorization: `Bearer ${token}`,
             },
           }
-        );
+        )
 
         if (!response.ok) {
           throw new Error("Kunne ikke hente film");
