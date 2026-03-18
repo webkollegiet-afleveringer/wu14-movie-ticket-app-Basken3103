@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+}
+
+.explore {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #111827, #1f2937);
+    padding: 24px 20px 90px;
+}
+
+.explore__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.explore__title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.explore__tabs {
+    background: #2a2f3a;
+    border-radius: 16px;
+    padding: 8px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.tab-btn {
+    flex: 1;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: transparent;
+    color: #aeb4c0;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.tab-btn--active {
+    background: #68b6ff;
+    color: white;
+    font-weight: 600;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.section-heading span {
+   color: #6b7280;
+   font-size: 0.95rem;
+}
+
+.movie-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 28px;
+}
+
+/*
+.movie-row::-webkit-scrollbar {
+  display: none;
+}
+*/
+
+.movie-card {
+    flex: 0 0 auto;
+}
+
+/* Fortsæt med movie-card--small */  
