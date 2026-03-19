@@ -97,4 +97,55 @@ body {
     flex: 0 0 auto;
 }
 
-/* Fortsæt med movie-card--small */  
+.movie-card__image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.movie-card__image--large {
+    height: 450px;
+}
+
+.movie-card__title {
+    margin: 12px 0 6px;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.movie-card__rating {
+    margin: 0;
+    color: #ffb23f;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+}
+
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #111827;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 16px 28px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.bottom-nav span {
+  color: #8b93a7;
+}
+
+.bottom-nav__active {
+  color: #68b6ff !important;
+}
+
+.explore-message {
+  color: white;
+  padding: 24px;
+}
+
