@@ -79,6 +79,110 @@ body {
      margin-bottom: 14px;
     } 
 
+    &__section-title {
+     font-size: 1.2rem;
+     font-weight: bold;
+     margin: 0;
+    }
+
+    &__see-more {
+        color: #7d8493;
+        font-size: 0.9rem;
+    }
+
+    
+    &__top-movies {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        margin-bottom: 18px;
+    }
+
+    &__recommended-movies {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        margin-bottom: 18px;
+    }
+
+    &__message {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        color: #ffffff;
+        background: #10141f;
+        font-size: 1.2rem;
+    }
+
+}
+
+.movie-card {
+  flex: 0 0 auto;
+
+  &--large {
+    width: 168px;
+  }
+
+  &--small {
+    width: 112px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+
+    &--large {
+      height: 262px;
+    }
+
+    &--small {
+      height: 168px;
+    }
+  }
+
+  &__title {
+    margin: 12px 0 6px;
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  &__rating {
+    margin: 0;
+    color: #ffb545;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+  }
+}
+
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #111827;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 16px 30px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    color: #7f8697;
+    font-size: 1.35rem;
+
+    &--active {
+      color: #69b7ff;
+    }
+
+    &__explore-message {
+        color: #ffffff;
+        padding: 24px;
+    }
+  }
 }
 
 
