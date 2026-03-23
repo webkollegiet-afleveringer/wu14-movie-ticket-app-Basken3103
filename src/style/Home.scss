@@ -1,0 +1,22 @@
+.home {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #10141f 0%, #151927 100%);
+  padding: 24px 20px 100px;
+  color: white;
+  font-family: sans-serif;
+
+
+&__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 24px;
+}
+
+&__welcome {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+}

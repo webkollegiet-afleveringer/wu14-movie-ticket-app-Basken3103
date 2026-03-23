@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../style/Home.scss";
 
 function Home() {
-  const [comingSoonMovie, setComingSoonMovie] = useState([null]);
+  const [comingSoonMovie, setComingSoonMovie] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -17,7 +17,7 @@ function Home() {
       closingTime: "Closed 10.00 PM",
       rating: "4,9",
       image:
-        "https://via.placeholder.com/80x80/ffffff/cc0000?text=VIVA",
+        "https://dummyimage.com/80x80/ffffff/cc0000&text=VIVA",
     },
       {
       id: 2,
@@ -26,7 +26,7 @@ function Home() {
       closingTime: "Closed 09.00 PM",
       rating: "5,0",
       image:
-        "https://via.placeholder.com/80x80/111111/ffffff?text=EL",
+        "https://dummyimage.com/80x80/000000/ffffff&text=EL",
     },
   ];
 
@@ -48,7 +48,7 @@ function Home() {
         }
 
         const data = await response.json();
-        fetchComingSoonMovie(data.results[0]);
+        setComingSoonMovie(data.results[0]);
       } catch (err) {
         setError(err.message);
       } finally {
