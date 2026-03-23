@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../style/Home.scss";
 
 function Home() {
-  const [comingSoonMovies, setComingSoonMovies] = useState([null]);
+  const [comingSoonMovie, setComingSoonMovie] = useState([null]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -48,7 +48,7 @@ function Home() {
         }
 
         const data = await response.json();
-        setComingSoonMovie(data.results[0]);
+        fetchComingSoonMovie(data.results[0]);
       } catch (err) {
         setError(err.message);
       } finally {
