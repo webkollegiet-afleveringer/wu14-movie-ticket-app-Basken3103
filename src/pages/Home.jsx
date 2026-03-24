@@ -148,6 +148,8 @@ function Home() {
         </div>
       </section>
 
+      
+
       <nav className="bottom-nav">
         <span className="bottom-nav__item bottom-nav__item--active">⌂</span>
         <span className="bottom-nav__item">◉</span>

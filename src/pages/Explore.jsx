@@ -72,20 +72,28 @@ function Explore() {
         <span>See more</span>
       </div>
 
-
       <div className="movie-row movie-row--large">
-        {topMovies.slice(0, 2).map((movie) => (
-          <article className="movie-card movie-card--large" key={movie.id}>
-            <img
-              src={`${baseImgUrl}${movie.poster_path}`}
-              alt={movie.title}
-              className="movie-card__image movie-card__image--large"
-            />
-            <h3 className="movie-card__title">{movie.title}</h3>
-            <p className="movie-card__rating">★★★★★</p>
-          </article>
-        ))}
-      </div>
+  {topMovies.slice(0, 2).map((movie) => (
+    <Link
+      to={`/details/${movie.id}`}
+      key={movie.id}
+      className="movie-link"
+    >
+      <article className="movie-card movie-card--large">
+        <img
+          src={`${baseImgUrl}${movie.poster_path}`}
+          alt={movie.title}
+          className="movie-card__image movie-card__image--large"
+        />
+        <h3 className="movie-card__title">{movie.title}</h3>
+        <p className="movie-card__rating">★★★★★</p>
+      </article>
+    </Link>
+  ))}
+</div>
+
+
+      
 
       <div className="section-heading">
         <h2>Recommended</h2>
