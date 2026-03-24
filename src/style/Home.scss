@@ -43,58 +43,151 @@
     object-fit: cover;
 }
 
-.search{
-    background: #2c313d;
-    border-radius: 16px;
+// SEARCH
 
-    padding: 14 16px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 24px;
-  }
-
-&__search {
+ &__search {
     background: #2c313d;
     border-radius: 16px;
     padding: 14px;
     display: flex;
     gap: 10px;
     align-items: center;
-    margin-bottom: 30px; 
-}
+    margin-bottom: 30px;
+  }
 
-&__search-input {
-  background: transparent;
-  border: none;
-  width: 100%;
-  text-align: center;
-}
+  &__search-input {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 100%;
 
-&__search-icon {
-  color: #9fa5b4;
-}
+    &:focus {
+      outline: none;
+    }
+  }
 
-.section {
+  &__search-icon {
+    color: #9fa5b4;
+  }
+
+  // SECTIONS
+
+  &__section {
     margin-bottom: 32px;
+  }
 
+  &__section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
 
-&__section-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-
-&__section-title {
+  &__section-title {
     font-size: 20px;
     font-weight: 700;
-}
+  }
 
-&__see-all {
+  &__see-all {
     color: #9fa5b4;
     font-size: 14px;
+  }
+
+  // FEATURED MOVIE
+
+  &__featured-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__featured-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  &__featured-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__featured-date {
+    color: #9fa5b4;
+    font-size: 14px;
+  }
+
+  // CINEMA LIST
+
+  &__cinema-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
+// CINEMA CARD
+
+.cinema-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  &__image {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__distance {
+    color: #6aa8ff;
+    font-size: 12px;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__time {
+    color: #9fa5b4;
+    font-size: 12px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__star {
+    color: gold;
+  }
 }
 
+// BOTTOM NAV
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: #151927;
+  padding: 14px 24px;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    color: #9fa5b4;
+
+    &--active {
+      color: #4da6ff;
+    }
+  }
 }
