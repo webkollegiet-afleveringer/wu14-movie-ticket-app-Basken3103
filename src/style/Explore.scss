@@ -10,25 +10,25 @@ body {
 }
 
 .explore {
-    min-height: 100vh;
-    background: linear-gradient(180deg, #10141f 0%, #151927 100%);
-    padding: 20px 24px 100px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #10141f 0%, #151927 100%);
+  padding: 20px 24px 100px;
 
-    &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 28px;
+  &__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  }
+
+  &__title {
+  font-size: 1.6rem;
+  font-weight: bold;
+      margin: 0;
     }
 
-    &__title {
-        font-size: 1.6rem;
-        font-weight: bold;
-        margin: 0;
-    }
-
-    &__icon-button {
-        background: none;
+  &__icon-button {
+    background: none;
         border: none;
         color: white;
         font-size: 1.4rem;
@@ -49,7 +49,7 @@ body {
         border: none;
         border-radius: 12px;
         padding: 14px 16px;
-        background: transparent;
+        background: #54A8E5;
         color: #aeb4c0;
         font-size: 0.95rem;
         cursor: pointer;
