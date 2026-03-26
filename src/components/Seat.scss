@@ -1,10 +1,14 @@
 .seat {
-   border: 1px solid #B2B5BB;
+   float: left;
+   width: 2.2rem;
+   height: 2.2rem;
+   margin: 0 0.55rem 0.9rem 0;
+   border: 1.5px solid #8b93a7;
    border-radius: .3rem;
-   width: 1rem;
-   height: 1rem;
+   box-sizing: border-box;
    display: block;
    cursor: pointer;
+   transition: 0.2s ease;
 
    &:has(input:checked) {
       background-color: #54A8E5;
@@ -21,4 +25,49 @@
       display: none;
    }
 
+}
+
+/* Start på nye rækker */
+.seat:nth-of-type(1),
+.seat:nth-of-type(7),
+.seat:nth-of-type(15),
+.seat:nth-of-type(23),
+.seat:nth-of-type(31),
+.seat:nth-of-type(39) {
+   clear: left;
+}
+
+/* Center de korte rækker (3 + 3) */
+.seat:nth-of-type(1),
+.seat:nth-of-type(39) {
+   margin-left: 2.8rem;
+}
+
+/* Lav midtergangen */
+.seat:nth-of-type(3),
+.seat:nth-of-type(10),
+.seat:nth-of-type(18),
+.seat:nth-of-type(26),
+.seat:nth-of-type(34),
+.seat:nth-of-type(41) {
+   margin-right: 2rem;
+}
+
+/* Ingen ekstra højremargin på sidste seat i hver række */
+.seat:nth-of-type(6),
+.seat:nth-of-type(14),
+.seat:nth-of-type(22),
+.seat:nth-of-type(30),
+.seat:nth-of-type(38),
+.seat:nth-of-type(44) {
+   margin-right: 0;
+}
+
+
+/* Sørg for at indhold under seat-layout ikke flyder op ved siden af */
+.seat-legend,
+.seats__checkout-button,
+.seats__summary,
+.checkout-button {
+   clear: both;
 }
