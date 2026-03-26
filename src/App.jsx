@@ -9,8 +9,6 @@ import Ticket from "./pages/Ticket"
 import Download from "./pages/Download"
 import SavedPlan from "./pages/SavedPlan"
 import Settings from "./pages/Settings"
-import SeatsComp from "./components/SeatsComp"
-
 
 function App() {
 

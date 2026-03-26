@@ -122,26 +122,24 @@ body {
 
   &--large {
     width: 168px;
+    
   }
 
   &--small {
     width: 112px;
   }
 
-  &__image {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 18px;
+  &__featured-image {
+  width: 50%;
+  max-width: 400px;
+  height: 500px;
 
-    &--large {
-      height: 262px;
-    }
+  display: block;
+  margin: 0 auto;
 
-    &--small {
-      height: 168px;
-    }
-  }
+  border-radius: 20px;
+  object-fit: cover;
+}
 
   &__title {
     margin: 12px 0 6px;
@@ -161,6 +159,13 @@ body {
     color: inherit;
     display: block;
   }
+
+
+}
+.movie-row {
+  display: flex;
+  gap: 25rem
+  
 }
 
 .bottom-nav {
@@ -214,6 +219,6 @@ body {
     cursor: pointer;
 }
 
-// Når jeg kommer til moviecard skal jeg gøre ligesom starten af explore
+
 
 

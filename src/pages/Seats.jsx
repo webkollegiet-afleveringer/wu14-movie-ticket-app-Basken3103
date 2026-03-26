@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "../style/Seats.scss";
+import Header from "../components/Header";
+import Seat from "../components/Seat";
 
 
 function Seats() {
@@ -7,7 +8,7 @@ function Seats() {
   const [selectedDate, setSelectedDate] = useState("02 Nov 2021");
   const [selectedTime, setSelectedTime] = useState("01.00 PM");
 
-  const [seats, setSeats] = useState([
+/*   const [seats, setSeats] = useState([
     { id: 1, row: 1, status: "availbale" },
     { id: 2, row: 1, status: "available" },
     { id: 3, row: 1, status: "available" },
@@ -78,15 +79,17 @@ function Seats() {
           : seat
       )
     );
-  }
+  } */
 
   return (
-    <section className="seats">
-      <header className="seats__header">
+    <> {/* <Fragment> */}
+ {/*      <header className="seats__header">
         <button className="seats__back-button">←</button>
         <h1 className="seats__title">Select Seats</h1>
         <div className="seats__spacer"></div>
-      </header>
+      </header> */}
+
+      <Header title="Select Seats" />
 
       <div className="seats__form-group">
         <label className="seats__label">Cinema</label>
@@ -147,10 +150,16 @@ function Seats() {
       </div>
 
 
-
+      <Seat />
+      <Seat />
+      <Seat />
+      <Seat selected />
+      <Seat />
+      <Seat reserved />
+      <Seat />
      
       
-    </section>
+    </> /* </Fragment> */
   )
 }
 
