@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../style/Home.scss";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   const [comingSoonMovie, setComingSoonMovie] = useState(null);
@@ -150,10 +151,10 @@ function Home() {
       
 
       <nav className="bottom-nav">
-        <span className="bottom-nav__item bottom-nav__item--active">⌂</span>
-        <span className="bottom-nav__item">◉</span>
-        <span className="bottom-nav__item">🔖</span>
-        <span className="bottom-nav__item">👤</span>
+        <NavLink to="/" className="bottom-nav__item bottom-nav__item--active">⌂</NavLink>
+        <NavLink to="/explore" className="bottom-nav__item">◉</NavLink>
+        <NavLink to="/ticket" className="bottom-nav__item">🔖</NavLink>
+        <NavLink to="/profile" className="bottom-nav__item">👤</NavLink>
       </nav>
     </section>
 
