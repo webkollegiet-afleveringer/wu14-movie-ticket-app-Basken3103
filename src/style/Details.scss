@@ -54,7 +54,7 @@
 
   &__meta {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     gap: 12px;
     color: #b3b8c5;
@@ -69,7 +69,9 @@
     margin: 0;
     color: #f5b544;
     font-weight: 600;
-    margin-right: 1925px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
   }
 
   &__tags {
