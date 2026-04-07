@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Seat from "../components/Seat";
+import "./Seats.scss";
 
 
 function Seats() {
@@ -11,6 +12,9 @@ function Seats() {
   return (
     <> 
       <Header title="Select Seats" />
+      <main className="seats-main">
+
+      
       <div className="seats__form-group">
         <label className="seats__label">Cinema</label>
         <div className="seats__select-wrapper seats__select-wrapper--full">
@@ -66,6 +70,8 @@ function Seats() {
 
     </div>
 
+      <div className="seat-container">
+
       
       <Seat />
       <Seat />
@@ -122,7 +128,8 @@ function Seats() {
       <Seat />
       <Seat />
       <Seat />
-      
+      </div>
+
       <div className="seat-legend">
         <div className="seat-legend__item">
           <span className="seat-legend__dot seat-legend__dot--selected"></span>
@@ -133,16 +140,16 @@ function Seats() {
           <span className="seat-legend__dot seat-legend__dot--reserved"></span>
           <span className="seat-legend__text">Reserved</span>
         </div>
-      </div>
+      
 
       <div className="seat-legend__item">
         <span className="seat-legend__dot seat-legend__dot--available"></span>
         <span className="seat-legend__text">Available</span>
       </div>
-
-      <button className="seats__checkout-button">Checkout</button>
-
+</div>
       
+</main>
+      <button className="seats__checkout-button">Checkout</button>
 
 
     </> /* </Fragment> */

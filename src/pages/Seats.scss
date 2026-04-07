@@ -1,0 +1,99 @@
+.seats-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.seat-container {}
+
+/* Sæde rækkerne */
+.seat:nth-of-type(1),
+.seat:nth-of-type(7),
+.seat:nth-of-type(15),
+.seat:nth-of-type(23),
+.seat:nth-of-type(31),
+.seat:nth-of-type(39) {
+    clear: left;
+}
+
+/* Centrering af de korte rækker */
+.seat:nth-of-type(1),
+.seat:nth-of-type(39) {
+    margin-left: 2.8rem;
+}
+
+/* Midtergangen */
+.seat:nth-of-type(3),
+.seat:nth-of-type(10),
+.seat:nth-of-type(18),
+.seat:nth-of-type(26),
+.seat:nth-of-type(34),
+.seat:nth-of-type(41) {
+    margin-right: 2rem;
+}
+
+/* Højremargin */
+.seat:nth-of-type(6),
+.seat:nth-of-type(14),
+.seat:nth-of-type(22),
+.seat:nth-of-type(30),
+.seat:nth-of-type(38),
+.seat:nth-of-type(44) {
+    margin-right: 0;
+}
+
+
+.seat-legend {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 2.2rem;
+    margin-bottom: 3.2rem;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__dot {
+        width: 0.65rem;
+        height: 0.65rem;
+        border-radius: 50%;
+
+
+        &--selected {
+            background-color: #54A8E5;
+        }
+
+        &--reserved {
+            background-color: #EB5757;
+        }
+
+        &--available {
+            border: 1.5px solid #7f8798;
+            background-color: transparent;
+        }
+    }
+
+    &__text {
+        color: #aab2c2;
+        font-size: 0.85rem;
+        font-weight: 400;
+    }
+
+    &__seats-checkout-button {
+        clear: both;
+        display: block;
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 1.15rem 1rem;
+        border: none;
+        border-radius: 1rem;
+        background: #63b2f4;
+        color: #ffffff;
+    }
+}
