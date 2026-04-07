@@ -27,7 +27,7 @@
 
 }
 
-/* Start på nye rækker */
+/* Sæde rækkerne */
 .seat:nth-of-type(1),
 .seat:nth-of-type(7),
 .seat:nth-of-type(15),
@@ -37,13 +37,13 @@
    clear: left;
 }
 
-/* Center de korte rækker (3 + 3) */
+/* Centrering af de korte rækker */
 .seat:nth-of-type(1),
 .seat:nth-of-type(39) {
    margin-left: 2.8rem;
 }
 
-/* Lav midtergangen */
+/* Midtergangen */
 .seat:nth-of-type(3),
 .seat:nth-of-type(10),
 .seat:nth-of-type(18),
@@ -53,7 +53,7 @@
    margin-right: 2rem;
 }
 
-/* Ingen ekstra højremargin på sidste seat i hver række */
+/* Højremargin */
 .seat:nth-of-type(6),
 .seat:nth-of-type(14),
 .seat:nth-of-type(22),
@@ -63,11 +63,81 @@
    margin-right: 0;
 }
 
+.seat-legend {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 2rem;
+   padding: 0 0.5rem;
 
-/* Sørg for at indhold under seat-layout ikke flyder op ved siden af */
-.seat-legend,
-.seats__checkout-button,
-.seats__summary,
-.checkout-button {
-   clear: both;
+
+   &__item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+   }
+
+   &__dot {
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+   }
+
+   &--selected {
+      background-color: #54A8E5;
+   }
+
+   &--reserved {
+      background-color: #EB5757;
+   }
+
+   &--available {
+      border: 1.5px solid #7f8798;
+      background-color: transparent;
+   }
+
+   &__text {
+      font-size: 0.9rem;
+      color: #aab2c2;
+   }
+
+   /* ---------- CHECKOUT BUTTON ---------- */
+
+   .seats__checkout-button {
+      width: 100%;
+      margin-top: 2rem;
+      padding: 1rem;
+
+      border: none;
+      border-radius: 1rem;
+
+      background: #63b2f4;
+      color: white;
+
+      font-size: 1.1rem;
+      font-weight: 600;
+
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      &:hover {
+         background: #4fa3eb;
+      }
+
+      &:active {
+         transform: scale(0.98);
+      }
+
+   }
+
+
+
+
+
+
+
+
+
+
+
 }

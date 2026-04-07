@@ -122,6 +122,29 @@ function Seats() {
       <Seat />
       <Seat />
       <Seat />
+      
+      <div className="seat-legend">
+        <div className="seat-legend__item">
+          <span className="seat-legend__dot seat-legend__dot--selected"></span>
+          <span className="seat-legend__text">Selected</span>
+        </div>
+
+        <div className="seat-legend__item">
+          <span className="seat-legend__dot seat-legend__dot--reserved"></span>
+          <span className="seat-legend__text">Reserved</span>
+        </div>
+      </div>
+
+      <div className="seat-legend__item">
+        <span className="seat-legend__dot seat-legend__dot--available"></span>
+        <span className="seat-legend__text">Available</span>
+      </div>
+
+      <button className="seats__checkout-button">Checkout</button>
+
+      
+
+
     </> /* </Fragment> */
   )
 }
