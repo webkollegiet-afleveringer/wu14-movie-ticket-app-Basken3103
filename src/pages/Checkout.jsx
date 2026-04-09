@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import "../style/Checkout.scss"
 
 function Checkout() {
 
@@ -65,20 +66,22 @@ function Checkout() {
             <div className="checkout__input-wrapper">
               <input type="text" defaultValue= "02 Nov 2021" className="checkout__input"></input>
               <span className="checkout__arrow">▼</span>
-
             </div>
           </div>
         </div>
 
-
-
-
+        <div className="checkout__field">
+          <label className="checkout__label">CVV</label>
+          <input type="text" defaultValue="123" className="checkout__input"/>
+        </div>
       </div>
 
-
-      
-     
-      
+      {/* Button */}
+      <button className="checkout__button">
+        <span className="checkout__button-text">Pay Now</span>
+        <span className="checkout__divider"></span>
+        <span className="checkout__price">$99.8</span>
+      </button>      
     </section>
   )
 }
