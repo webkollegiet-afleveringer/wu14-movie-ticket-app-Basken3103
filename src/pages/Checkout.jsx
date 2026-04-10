@@ -1,5 +1,7 @@
 import Header from "../components/Header";
 import "../style/Checkout.scss"
+import { FiChevronDown } from "react-icons/fi";
+import { FaRegCircle } from "react-icons/fa";
 
 function Checkout() {
 
@@ -17,8 +19,8 @@ function Checkout() {
         <div className="checkout__card">
           <div className="checkout__card-top">
             <div className="checkout__card-icons">
-              <span className="checkout__circle checkout__circle --red"></span>
-              <span className="checkout__circle checkout__circle --yellow"></span>
+              <span className="checkout__circle checkout__circle --red"><FaRegCircle /></span>
+              <span className="checkout__circle checkout__circle --yellow"><FaRegCircle /></span>
             </div>
 
             <div className="checkout__balance">
@@ -65,7 +67,7 @@ function Checkout() {
             <label className="checkout__label">Date</label>
             <div className="checkout__input-wrapper">
               <input type="text" defaultValue= "02 Nov 2021" className="checkout__input"></input>
-              <span className="checkout__arrow">▼</span>
+              <span className="checkout__arrow"><FiChevronDown /></span>
             </div>
           </div>
         </div>

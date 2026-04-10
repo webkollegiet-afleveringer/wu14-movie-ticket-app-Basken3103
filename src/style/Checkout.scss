@@ -125,6 +125,46 @@
         font-family: inherit;
     }
 
+    &__arrow {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #c7ccd7;
+    }
+
+    &__button {
+        width: 90%;
+        margin-top: 30px;
+        border: none;
+        border-radius: 1rem;
+        background: #63b2f4;
+        color: #ffffff;
+        padding: 16px;
+    }
+
+    &__button-text {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    &__divider {
+        width: 1px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.75);
+        margin: 0 18px;
+    }
+
+    &__price {
+        min-width: 78px;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+
+
+
+
 
 
 
