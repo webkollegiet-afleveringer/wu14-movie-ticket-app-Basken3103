@@ -120,7 +120,7 @@
         border: 1px solid #4f5564;
         border-radius: 0.95rem;
         background: transparent;
-        /* color venter jeg med*/
+        color: #b2b5bb;
         font-size: 0.98rem;
         font-family: inherit;
     }
@@ -160,6 +160,14 @@
         font-size: 1rem;
         font-weight: 700;
     }
+
+    &__checkout-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    //TODO
+    /*Kigger på det med grid derhjemme, da det er noget som jeg har brug for at læse op på*/
 
 
 

@@ -24,8 +24,8 @@ function Checkout() {
             </div>
 
             <div className="checkout__balance">
-                <p className="checkout__balance-label">Balance</p>
-                <h3 className="checkout__balance-value">$120,580,00</h3>
+              <p className="checkout__balance-label">Balance</p>
+              <h3 className="checkout__balance-value">$120,580,00</h3>
             </div>
           </div>
 
@@ -36,7 +36,7 @@ function Checkout() {
             </div>
 
             <p className="checkout__card-number">
-               **** **** **** 51446
+              **** **** **** 51446
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ function Checkout() {
           <input type="text" defaultValue="Miles Morales" className="checkout__input"></input>
         </div>
 
-        {/* Nedereste input felt virker ikke, skal have fundet ud af hvorfor */}
+
         <div className="checkout__field">
           <label className="checkout__label">Card Number</label>
           <input type="text" defaultValue="**** **** **** 51446" className="checkout__input"></input>
@@ -65,8 +65,9 @@ function Checkout() {
         <div className="checkout__row">
           <div className="checkout__field">
             <label className="checkout__label">Date</label>
+
             <div className="checkout__input-wrapper">
-              <input type="text" defaultValue= "02 Nov 2021" className="checkout__input"></input>
+              <input type="text" defaultValue="02 Nov 2021" className="checkout__input"></input>
               <span className="checkout__arrow"><FiChevronDown /></span>
             </div>
           </div>
@@ -74,7 +75,7 @@ function Checkout() {
 
         <div className="checkout__field">
           <label className="checkout__label">CVV</label>
-          <input type="text" defaultValue="123" className="checkout__input"/>
+          <input type="text" defaultValue="123" className="checkout__input" />
         </div>
       </div>
 
@@ -83,7 +84,7 @@ function Checkout() {
         <span className="checkout__button-text">Pay Now</span>
         <span className="checkout__divider"></span>
         <span className="checkout__price">$99.8</span>
-      </button>      
+      </button>
     </section>
   )
 }
