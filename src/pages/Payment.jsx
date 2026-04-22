@@ -53,9 +53,6 @@ function Payment() {
 
       <label className="payment__label">Cardholder Name</label>
 
-
-      {/*Resten af html'en giver mening når scss'en er kommet på*/}
-
       <div className="payment__sheet">
         <div className="payment__success-icon">
           <span className="payment__success-check">✓</span>
@@ -70,11 +67,6 @@ function Payment() {
       </p>
 
       <button className="payment__button">See E-Ticket</button>
-
-
-
-
-
     </section>
   )
 }
