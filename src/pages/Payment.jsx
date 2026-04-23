@@ -57,16 +57,15 @@ function Payment() {
         <div className="payment__success-icon">
           <span className="payment__success-check">✓</span>
         </div>
+
+        <h2 className="payment__success-title">Your payment was successful</h2>
+
+        <p className="payment__success-text">Adele is a Scottish heiress whose extremely wealthy family owns estates
+          and grounds. When she was a teenager. Read More
+        </p>
+
+        <button className="payment__button">See E-Ticket</button>
       </div>
-
-      <h2 className="payment__success-title">Your payment was successful</h2>
-
-      <p className="payment__succes-text">
-        Adele is a Scottish heiress whose extremely wealthy family owns estates
-        and grounds. When she was a teenager. Read More
-      </p>
-
-      <button className="payment__button">See E-Ticket</button>
     </section>
   )
 }

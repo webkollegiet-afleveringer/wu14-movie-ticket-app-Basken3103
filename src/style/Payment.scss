@@ -18,11 +18,69 @@
     &__change {
         color: #8f95a3;
         font-size: 14px;
-        /*Venter med den*/
+
     }
 }
 
 .checkout__circle {
     font-size: 25px;
     /*Laver resten derhjemme*/
+}
+
+.payment {
+
+    &__success {
+        position: relative;
+        min-height: 100vh;
+        padding-bottom: 0;
+    }
+
+    &__sheet {
+        background: #54a8e5;
+        border-radius: 20px;
+        margin-top: 40px;
+        padding: 60px 24px 40px;
+
+        margin-left: -20px;
+        margin-right: 29px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        position: absolute;
+        bottom: 0;
+
+    }
+
+    &__success-icon {
+        width: 70px;
+        height: 70px;
+        background: #54a8e5;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+
+        margin-top: -95px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    &__success-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    &__success-text {
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        background: #10141f;
+        width: 90%;
+        color: white;
+        border-radius: 8px;
+        height: 50px;
+    }
 }
