@@ -5,6 +5,9 @@
       margin-bottom: 28px;
 
       &__back-button {
+          position: absolute;
+          margin-left: -300px;
           color: white;
+          font-size: 20px;
       }
   }
