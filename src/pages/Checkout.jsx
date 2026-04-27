@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import "../style/Checkout.scss"
+import "../style/Checkout.scss";
 import { FiChevronDown } from "react-icons/fi";
 import { FaRegCircle } from "react-icons/fa";
 

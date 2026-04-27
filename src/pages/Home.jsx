@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../style/Home.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+
 
 function Home() {
   const [comingSoonMovie, setComingSoonMovie] = useState(null);
@@ -20,7 +21,7 @@ function Home() {
       image:
         "https://dummyimage.com/80x80/ffffff/cc0000&text=VIVA",
     },
-      {
+    {
       id: 2,
       name: "EbonyLife Cinema",
       distance: "6,5 Kilometers",
@@ -49,6 +50,7 @@ function Home() {
         }
 
         const data = await response.json();
+        console.log(data.results[0])
         setComingSoonMovie(data.results[0]);
       } catch (err) {
         setError(err.message);
@@ -67,10 +69,10 @@ function Home() {
   if (error) {
     return <p className="home__message">Fejl: {error}</p>;
   }
-    
-  
+
+
   return (
-     <section className="home">
+    <section className="home">
       <header className="home__header">
         <div className="home__welcome">
           <p className="home__greeting">Welcome Back,</p>
@@ -99,22 +101,25 @@ function Home() {
         <h2 className="home__section-title">Coming Soon</h2>
 
         {comingSoonMovie && (
-          <article className="home__featured-card">
-            <img
-              className="home__featured-image"
-              src={`${baseImgUrl}${comingSoonMovie.backdrop_path}`}
-              alt={comingSoonMovie.title}
-            />
+          <Link to={`/details/${comingSoonMovie.id}`}>
+            <article className="home__featured-card">
+              <img
+                className="home__featured-image"
+                src={`${baseImgUrl}${comingSoonMovie.backdrop_path}`}
+                alt={comingSoonMovie.title}
+              />
 
-            <div className="home__featured-content">
-              <h3 className="home__featured-title">
-                {comingSoonMovie.title}
-              </h3>
-              <p className="home__featured-date">
-                {comingSoonMovie.release_date}
-              </p>
-            </div>
-          </article>
+              <div className="home__featured-content">
+                <h3 className="home__featured-title">
+                  {comingSoonMovie.title}
+                </h3>
+                <p className="home__featured-date">
+                  {comingSoonMovie.release_date}
+                </p>
+              </div>
+            </article>
+          </Link>
+
         )}
       </section>
 
@@ -148,7 +153,7 @@ function Home() {
         </div>
       </section>
 
-      
+
 
       <nav className="bottom-nav">
         <NavLink to="/" className="bottom-nav__item bottom-nav__item--active">⌂</NavLink>
@@ -158,7 +163,7 @@ function Home() {
       </nav>
     </section>
 
-       
+
   );
 }
 

@@ -2,154 +2,157 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Seat from "../components/Seat";
 import "./Seats.scss";
+import { Link } from "react-router-dom";
 
 
 function Seats() {
-  const[selectedCinema, setSelectedCinema] = useState("Empire XXI Yogyakarta");
+  const [selectedCinema, setSelectedCinema] = useState("Empire XXI Yogyakarta");
   const [selectedDate, setSelectedDate] = useState("02 Nov 2021");
   const [selectedTime, setSelectedTime] = useState("01.00 PM");
 
   return (
-    <> 
+    <>
       <Header title="Select Seats" />
       <main className="seats-main">
 
-      
-      <div className="seats__form-group">
-        <label className="seats__label">Cinema</label>
-        <div className="seats__select-wrapper seats__select-wrapper--full">
-          <select
-          className="seats__select"
-          value={selectedCinema}
-          onChange={(e) => setSelectedCinema(e.target.value)}
-          >
-            <option>Empire XXI Yogyakarta</option>
-            <option>Viva Cinema</option>
-            <option>EbonyLife Cinema</option>
-          </select>
-        </div>
-      </div>
 
-      <div className="seats__row-fields">
-        <div className="seats__form-group seats__form-group--half">
-          <label className="seats__label">Date</label>
-          <div className="seats__select-wrapper">
-            <select
-             className="seats__select"
-             value={selectedDate}
-             onChange={(e) => setSelectedDate(e.target.value)}
-            
-            >
-              <option>02 Nov 2021</option>
-              <option>03 Nov 2021</option>
-              <option>04 Nov 2021</option>
-            </select>
-          </div>
-        </div>
-
-        <div className="seats__form-group seats__form-group--half">
-          <label className="seats__label">Time</label>
-          <div className="seats__select-wrapper">
+        <div className="seats__form-group">
+          <label className="seats__label">Cinema</label>
+          <div className="seats__select-wrapper seats__select-wrapper--full">
             <select
               className="seats__select"
-              value={selectedTime}
-              onChange={(e) => setSelectedTime(e.target.value)}
-            
+              value={selectedCinema}
+              onChange={(e) => setSelectedCinema(e.target.value)}
             >
-              <option>01.00 PM</option>
-              <option>04.00 PM</option>
-              <option>08.00 PM</option>
+              <option>Empire XXI Yogyakarta</option>
+              <option>Viva Cinema</option>
+              <option>EbonyLife Cinema</option>
             </select>
           </div>
         </div>
 
-        <div className="screen">
-        <div className="screen__arc"></div>
-        <div className="screen__glow"></div>
-      </div>
+        <div className="seats__row-fields">
+          <div className="seats__form-group seats__form-group--half">
+            <label className="seats__label">Date</label>
+            <div className="seats__select-wrapper">
+              <select
+                className="seats__select"
+                value={selectedDate}
+                onChange={(e) => setSelectedDate(e.target.value)}
 
-    </div>
+              >
+                <option>02 Nov 2021</option>
+                <option>03 Nov 2021</option>
+                <option>04 Nov 2021</option>
+              </select>
+            </div>
+          </div>
 
-      <div className="seat-container">
+          <div className="seats__form-group seats__form-group--half">
+            <label className="seats__label">Time</label>
+            <div className="seats__select-wrapper">
+              <select
+                className="seats__select"
+                value={selectedTime}
+                onChange={(e) => setSelectedTime(e.target.value)}
 
-      
-      <Seat />
-      <Seat />
-      <Seat />
+              >
+                <option>01.00 PM</option>
+                <option>04.00 PM</option>
+                <option>08.00 PM</option>
+              </select>
+            </div>
+          </div>
 
-      <Seat />
-      <Seat />
-      <Seat />
+          <div className="screen">
+            <div className="screen__arc"></div>
+            <div className="screen__glow"></div>
+          </div>
 
-      <Seat />
-      <Seat />
-      <Seat />
-      <Seat />
-
-      <Seat />
-      <Seat />
-      <Seat />
-      <Seat />
-
-      <Seat />
-      <Seat />
-      <Seat />
-      <Seat selected />
-      
-      <Seat selected />
-      <Seat />
-      <Seat />
-      <Seat />
-
-      <Seat reserved />
-      <Seat reserved />
-      <Seat reserved />
-      <Seat reserved />
-
-      <Seat reserved />
-      <Seat reserved />
-      <Seat reserved />
-      <Seat reserved />
-
-      <Seat reserved />
-      <Seat reserved />
-      <Seat reserved />
-      <Seat reserved />
-
-      <Seat reserved />
-      <Seat reserved />
-      <Seat reserved />
-      <Seat reserved />
-
-      <Seat />
-      <Seat />
-      <Seat />
-      
-      <Seat />
-      <Seat />
-      <Seat />
-      </div>
-
-      <div className="seat-legend">
-        <div className="seat-legend__item">
-          <span className="seat-legend__dot seat-legend__dot--selected"></span>
-          <span className="seat-legend__text">Selected</span>
         </div>
 
-        <div className="seat-legend__item">
-          <span className="seat-legend__dot seat-legend__dot--reserved"></span>
-          <span className="seat-legend__text">Reserved</span>
-        </div>
-      
+        <div className="seat-container">
 
-      <div className="seat-legend__item">
-        <span className="seat-legend__dot seat-legend__dot--available"></span>
-        <span className="seat-legend__text">Available</span>
-      </div>
-</div>
-      
-</main>
-      <button className="seats__checkout-button">Checkout</button>
+
+          <Seat />
+          <Seat />
+          <Seat />
+
+          <Seat />
+          <Seat />
+          <Seat />
+
+          <Seat />
+          <Seat />
+          <Seat />
+          <Seat />
+
+          <Seat />
+          <Seat />
+          <Seat />
+          <Seat />
+
+          <Seat />
+          <Seat />
+          <Seat />
+          <Seat selected />
+
+          <Seat selected />
+          <Seat />
+          <Seat />
+          <Seat />
+
+          <Seat reserved />
+          <Seat reserved />
+          <Seat reserved />
+          <Seat reserved />
+
+          <Seat reserved />
+          <Seat reserved />
+          <Seat reserved />
+          <Seat reserved />
+
+          <Seat reserved />
+          <Seat reserved />
+          <Seat reserved />
+          <Seat reserved />
+
+          <Seat reserved />
+          <Seat reserved />
+          <Seat reserved />
+          <Seat reserved />
+
+          <Seat />
+          <Seat />
+          <Seat />
+
+          <Seat />
+          <Seat />
+          <Seat />
+        </div>
+
+        <div className="seat-legend">
+          <div className="seat-legend__item">
+            <span className="seat-legend__dot seat-legend__dot--selected"></span>
+            <span className="seat-legend__text">Selected</span>
+          </div>
+
+          <div className="seat-legend__item">
+            <span className="seat-legend__dot seat-legend__dot--reserved"></span>
+            <span className="seat-legend__text">Reserved</span>
+          </div>
+
+
+          <div className="seat-legend__item">
+            <span className="seat-legend__dot seat-legend__dot--available"></span>
+            <span className="seat-legend__text">Available</span>
+          </div>
+        </div>
+
+      </main>
+      <Link to='/checkout' className="seats__checkout-button">Checkout</Link>
+
+      {/* Lav en funktion der gemmer biograf, tidspunkt og sæder*/}
 
 
     </> /* </Fragment> */

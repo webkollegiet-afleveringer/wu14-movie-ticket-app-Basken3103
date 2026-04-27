@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import "../style/Details.scss"
 
 
@@ -51,6 +51,10 @@ function Details() {
     return <p className="details__message">Fejl: {error}</p>;
   }
 
+  function saveLocalStorage() {
+    localStorage.setItem("savedMoviedata", JSON.stringify(movie))
+  }
+
   return (
     <section className="details">
       <header className="details__header">
@@ -98,7 +102,8 @@ function Details() {
           </p>
         </div>
 
-        <button className="details__button">Book Ticket</button>
+        <Link to='/seats' onClick={saveLocalStorage} className="details__button">Book Ticket</Link>
+
       </div>
     </section>
   );
