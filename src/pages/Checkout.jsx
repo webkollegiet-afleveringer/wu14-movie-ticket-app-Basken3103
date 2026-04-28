@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import "../style/Checkout.scss";
 import { FiChevronDown } from "react-icons/fi";
 import { FaRegCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Checkout() {
 
@@ -80,12 +81,16 @@ function Checkout() {
       </div>
 
       {/* Button */}
-      <button className="checkout__button">
+      <Link to='/payment' className="checkout__button">
         <span className="checkout__button-text">Pay Now</span>
         <span className="checkout__divider"></span>
         <span className="checkout__price">$99.8</span>
-      </button>
+      </Link>
     </section>
+
+
+
+
   )
 }
 

@@ -2,6 +2,7 @@ import Header from "../components/Header"
 import "../style/Payment.scss"
 import { FiChevronDown } from "react-icons/fi";
 import { FaRegCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 function Payment() {
@@ -64,7 +65,7 @@ function Payment() {
           and grounds. When she was a teenager. Read More
         </p>
 
-        <button className="payment__button">See E-Ticket</button>
+        <Link to='/ticket' className="payment__button">See E-Ticket</Link>
       </div>
     </section>
   )

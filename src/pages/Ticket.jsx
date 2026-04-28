@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import "../style/Ticket.scss";
 
@@ -65,7 +66,7 @@ function Ticket() {
         <img src="https://bwipjs-api.metafloor.com/?bcid=code128&text=1904566&scale=3&rotate=N&includetext" alt="Barcode" className="ticket__barcode-img" />
       </div>
 
-      <button className="ticket__download-btn">Download E-ticket</button>
+      <Link to='/download' className="ticket__download-btn">Download E-ticket</Link>
     </section>
   )
 }

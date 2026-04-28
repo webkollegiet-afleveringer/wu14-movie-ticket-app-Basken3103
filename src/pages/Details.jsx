@@ -52,7 +52,7 @@ function Details() {
   }
 
   function saveLocalStorage() {
-    localStorage.setItem("savedMoviedata", JSON.stringify(movie))
+    localStorage.setItem("savedMovieData", JSON.stringify(movie))
   }
 
   return (

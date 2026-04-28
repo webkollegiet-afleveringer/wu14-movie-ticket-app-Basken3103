@@ -10,6 +10,19 @@ function Seats() {
   const [selectedDate, setSelectedDate] = useState("02 Nov 2021");
   const [selectedTime, setSelectedTime] = useState("01.00 PM");
 
+  function saveBooking() {
+    const booking = {
+      cinema: selectedCinema,
+      date: selectedDate,
+      time: selectedTime,
+      seats: ["D4", "D5"], // midlertidigt, indtil sæderne bliver dynamiske 
+    };
+
+    localStorage.setItem("booking", JSON.stringify(booking));
+
+
+  }
+
   return (
     <>
       <Header title="Select Seats" />
@@ -150,12 +163,12 @@ function Seats() {
         </div>
 
       </main>
-      <Link to='/checkout' className="seats__checkout-button">Checkout</Link>
+      <Link to='/checkout' onClick={saveBooking} className="seats__checkout-button">Checkout</Link>
 
       {/* Lav en funktion der gemmer biograf, tidspunkt og sæder*/}
 
 
-    </> /* </Fragment> */
+    </>
   )
 }
 

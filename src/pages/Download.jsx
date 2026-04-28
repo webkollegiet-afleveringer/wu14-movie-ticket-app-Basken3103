@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import "../style/Download.scss";
 import { FaDownload } from "react-icons/fa";
@@ -76,7 +77,7 @@ function Download() {
         and grounds. When she was a teenager. Read More
       </p>
 
-      <button className="download__button">Back To Home</button>
+      <Link to='/' className="download__button">Back To Home</Link>
     </section>
   )
 }

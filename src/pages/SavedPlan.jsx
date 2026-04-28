@@ -9,63 +9,11 @@ import { NavLink } from "react-router-dom";
 import { FiTrash } from "react-icons/fi";
 
 function SavedPlan() {
-  const [comingSoonMovie, setComingSoonMovie] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
   const token = import.meta.env.VITE_TMDB_TOKEN
-  const baseImgUrl = "https://image.tmdb.org/t/p/w500";
+  const baseImgUrl = "https://image.tmdb.org/t/p/w500"; /*Hvorfor kan billedet ikke hentes?*/
 
-  const cinemas = [
-    {
-      id: 1,
-      genre: "Action",
-      name: "No Time To Die",
-      time: "2h 43m",
-      rating: "5,0",
-      image:
-        "https://dummyimage.com/80x80/ffffff/cc0000&text=VIVA",
-    },
-  ];
-
-  useEffect(() => {
-    async function fetchComingSoonMovie() {
-      try {
-        const response = await fetch(
-          "https://api.themoviedb.org/3/movie/upcoming",
-          {
-            headers: {
-              accept: "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error("Kunne ikke hente kommende film");
-        }
-
-        const data = await response.json();
-        setComingSoonMovie(data.results[0]);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchComingSoonMovie();
-  }, [token]);
-
-  if (loading) {
-    return <p className="home__message">Loading...</p>;
-  }
-
-  if (error) {
-    return <p className="home__message">Fejl: {error}</p>;
-  }
-
-  /*Må få Henrik til at hjælpe mig med api delen, jeg ved godt hvad jeg skal, men hvordan er en anden historie*/
+  const [movieData, setMovieData] = useState(JSON.parse(localStorage.getItem("savedMovieData")))
+  console.log(movieData)
 
   return (
     <section className="saved-plan">
@@ -73,6 +21,12 @@ function SavedPlan() {
 
       {/*Overskrift 1*/}
       <h1>1. 02 November 2021</h1>
+
+      <h5>{movieData?.genres[0].name}</h5>
+      <h3>{movieData?.title}</h3>
+      <h5>{movieData?.runtime}</h5>
+      <h4>{/*rating*/}</h4>
+      {/*Venter med billedet til stylingen er på plads*/}
 
       {/*Input felterne*/}
       <div className="saved-plan__form">
@@ -136,6 +90,14 @@ function SavedPlan() {
       </div>
 
       <h1>2. 17 December 2021</h1>
+
+      <h5>{movieData?.genres[0].name}</h5>
+      <h3>{movieData?.title}</h3>
+      <h5>{movieData?.runtime}</h5>
+      <h4>{/*rating*/}</h4>
+      {/*Venter med billedet til stylingen er på plads*/}
+
+      <h5>Cinema</h5>
 
       <nav className="bottom-nav">
         <NavLink to="/" className="bottom-nav__item bottom-nav__item--active">⌂</NavLink>
