@@ -5,12 +5,7 @@
   color: white;
   font-family: sans-serif;
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 28px;
-  }
+
 
   &__title {
     margin: 0;
@@ -107,7 +102,7 @@
 
   &__button {
     margin-top: 18px;
-    width: 100%;
+    width: 90%;
     border: none;
     border-radius: 18px;
     padding: 18px;
@@ -116,6 +111,7 @@
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
+    text-align: center;
   }
 
   &__message {

@@ -1,6 +1,10 @@
+import Header from "../components/Header"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../style/Explore.scss";
+import { FaChevronLeft, FaSearch, FaStar } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+
 
 
 function Explore() {
@@ -10,7 +14,6 @@ function Explore() {
   const [error, setError] = useState(null);
 
   const token = import.meta.env.VITE_TMDB_TOKEN
-  console.log("TMDB Token:", token); // Debugging: Check if the token is loaded correctly
   const baseImgUrl = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
@@ -56,11 +59,11 @@ function Explore() {
 
   return (
     <section className="explore">
-      <header className="explore__header">
-        <button className="icon-btn">←</button>
-        <h1 className="explore__title">Explore Movie</h1>
-        <button className="icon-btn">🔍</button>
-      </header>
+      <header className="explore__movie"></header>
+      <span className="explore__icon-btn"><FaChevronLeft /></span>
+      <h1 className="explore__title">Explore Movie</h1>
+      <span className="explore__icon-btn"><FaSearch /></span>
+
 
       <div className="explore__tabs">
         <button className="tab-btn tab-btn--active">Now Showing</button>
@@ -73,27 +76,27 @@ function Explore() {
       </div>
 
       <div className="movie-row movie-row--large">
-  {topMovies.slice(0, 2).map((movie) => (
-    <Link
-      to={`/details/${movie.id}`}
-      key={movie.id}
-      className="movie-link"
-    >
-      <article className="movie-card movie-card--large">
-        <img
-          src={`${baseImgUrl}${movie.poster_path}`}
-          alt={movie.title}
-          className="movie-card__image movie-card__image--large"
-        />
-        <h3 className="movie-card__title">{movie.title}</h3>
-        <p className="movie-card__rating">★★★★★</p>
-      </article>
-    </Link>
-  ))}
-</div>
+        {topMovies.slice(0, 5).map((movie) => (
+          <Link
+            to={`/details/${movie.id}`}
+            key={movie.id}
+            className="movie-link"
+          >
+            <article className="movie-card movie-card--large">
+              <img
+                src={`${baseImgUrl}${movie.poster_path}`}
+                alt={movie.title}
+                className="movie-card__image movie-card__image--large"
+              />
+              <h3 className="movie-card__title">{movie.title}</h3>
+              <p className="movie-card__rating">★★★★★</p>
+            </article>
+          </Link>
+        ))}
+      </div>
 
 
-      
+
 
       <div className="section-heading">
         <h2>Recommended</h2>
@@ -115,11 +118,12 @@ function Explore() {
       </div>
 
       <nav className="bottom-nav">
-        <span>⌂</span>
-        <span className="bottom-nav__active">◉</span>
-        <span>🔖</span>
-        <span>👤</span>
+        <NavLink to="/" className="bottom-nav__item bottom-nav__item--active">⌂</NavLink>
+        <NavLink to="/explore" className="bottom-nav__item">◉</NavLink>
+        <NavLink to="/ticket" className="bottom-nav__item">🔖</NavLink>
+        <NavLink to="/profile" className="bottom-nav__item">👤</NavLink>
       </nav>
+
     </section>
   );
 }

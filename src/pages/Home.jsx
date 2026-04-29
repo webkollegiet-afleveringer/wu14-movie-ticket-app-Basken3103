@@ -3,6 +3,7 @@ import "../style/Home.scss";
 import { NavLink, Link } from "react-router-dom";
 
 
+
 function Home() {
   const [comingSoonMovie, setComingSoonMovie] = useState(null);
   const [loading, setLoading] = useState(true);

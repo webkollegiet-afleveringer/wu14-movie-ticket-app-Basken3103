@@ -39,11 +39,6 @@ function Settings() {
       </div>
 
       {/*Går i gang med design nu*/}
-
-
-
-
-
     </section>
   )
 }
