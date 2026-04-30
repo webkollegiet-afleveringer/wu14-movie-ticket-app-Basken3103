@@ -1,5 +1,26 @@
 #root {
     min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr;
+    // display: grid;
+    // grid-template-rows: auto 1fr;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 30px;
+    // padding-top: 0;
+    // padding-right: 0;
+    // padding-bottom: 0;
+    // padding-left: 0;
+
+    // padding: 0 0 0 0;
+
+    // padding: 0 0;
+}
+
+.main-padding-left-right {
+    padding-left: 30px;
+    padding-right: 30px;
 }

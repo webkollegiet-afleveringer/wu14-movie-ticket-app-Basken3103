@@ -11,7 +11,7 @@ function Checkout() {
       <Header title="Checkout" />
 
       {/* Payment Method*/}
-      <div className="checkout__section">
+      <div className="checkout__section main-padding-left-right">
         <div className="checkout__section-header">
           <h2 className="checkout__title">Payment Method</h2>
           <span className="checkout__change">Change</span>
@@ -44,7 +44,7 @@ function Checkout() {
       </div>
 
       {/* Payment Details */}
-      <div className="checkout__section">
+      <div className="checkout__section main-padding-left-right">
         <h2 className="checkout__title">Payment Details</h2>
 
         <div className="checkout__field">
@@ -81,11 +81,14 @@ function Checkout() {
       </div>
 
       {/* Button */}
-      <Link to='/payment' className="checkout__button">
-        <span className="checkout__button-text">Pay Now</span>
-        <span className="checkout__divider"></span>
-        <span className="checkout__price">$99.8</span>
-      </Link>
+      <div className="checkout__button-wrapper main-padding-left-right">
+        <Link to='/payment' className="checkout__button">
+          <span className="checkout__button-text">Pay Now</span>
+          <span className="checkout__divider">|</span>
+          <span className="checkout__price">$99.8</span>
+        </Link>
+      </div>
+
     </section>
 
 

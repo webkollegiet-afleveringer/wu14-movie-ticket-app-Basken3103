@@ -16,7 +16,7 @@ function Seats() {
       cinema: selectedCinema,
       date: selectedDate,
       time: selectedTime,
-      seats: ["D4", "D5"], // midlertidigt, indtil sæderne bliver dynamiske 
+      seats: ["D4", "D5"],
     };
 
     localStorage.setItem("booking", JSON.stringify(booking));
@@ -31,7 +31,6 @@ function Seats() {
         <div className="seats__form-group">
           <label className="seats__label">Cinema</label>
           <input type="text" defaultValue="Empire XXI Yogyakarta" className="checkout__input"></input>
-          <span className="checkout__arrow"><SlArrowDown /></span>
           <div className="seats__select-wrapper seats__select-wrapper--full">
 
           </div>
@@ -40,27 +39,19 @@ function Seats() {
         <div className="seats__row-fields">
           <div className="seats__form-group seats__form-group--half">
             <label className="seats__label">Date</label>
+            <input type="text" defaultValue="02 Nov 2021" className="checkout__input"></input>
             <div className="seats__select-wrapper">
-              <select className="seats__select" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)}>
-                <option>02 Nov 2021</option>
-                <option>03 Nov 2021</option>
-                <option>04 Nov 2021</option>
-              </select>
             </div>
           </div>
 
           <div className="seats__form-group seats__form-group--half">
             <label className="seats__label">Time</label>
+            <input type="text" defaultValue="01.00 PM" className="checkout__input"></input>
             <div className="seats__select-wrapper">
-              <select className="seats__select" value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)}>
-                <option>01.00 PM</option>
-                <option>04.00 PM</option>
-                <option>08.00 PM</option>
-              </select>
             </div>
           </div>
 
-          {/*Mangler sass*/}
+
           <div className="screen">
             <div className="screen__arc"></div>
             <div className="screen__glow"></div>
@@ -143,13 +134,17 @@ function Seats() {
           <div className="seat-legend__item">
             <span className="seat-legend__dot seat-legend__dot--available"></span>
             <span className="seat-legend__text">Available</span>
+
           </div>
         </div>
 
       </main>
-      <Link to='/checkout' onClick={saveBooking} className="seats__checkout-button">Checkout</Link>
+      <div className="main-padding-left-right">
+        <Link to='/checkout' onClick={saveBooking} className="seats__checkout-button">Checkout</Link>
+      </div>
 
-      {/* Lav en funktion der gemmer biograf, tidspunkt og sæder*/}
+
+
 
 
     </>

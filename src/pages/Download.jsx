@@ -10,7 +10,7 @@ function Download() {
     <section className="download">
       <Header title="E-ticket" />
 
-      <div className="download__instruction">
+      <div className="download__instruction main-padding-left-right">
         <h2 className="download__instruction-title">Instruction</h2>
         <p className="ticket__instruction-text">
           Come to the cinema, show and scan the<br />
@@ -19,7 +19,7 @@ function Download() {
         </p>
       </div>
 
-      <div className="ticket__card">
+      <div className="ticket__card main-padding-left-right">
         <div className="ticket__info">
           <div className="ticket__row">
             <h3 className="ticket__movie">Film: Shang-Chi</h3>
@@ -28,7 +28,7 @@ function Download() {
         </div>
       </div>
 
-      <div className="ticket__grid">
+      <div className="ticket__grid main-padding-left-right">
         <div className="ticket__item">
           <span className="ticket__label">Date</span>
           <p className="ticket__value">06/09/2021</p>
@@ -77,7 +77,7 @@ function Download() {
         and grounds. When she was a teenager. Read More
       </p>
 
-      <Link to='/' className="download__button">Back To Home</Link>
+      <Link to='/' className="download__button main-padding-left-right">Back To Home</Link>
     </section>
   )
 }

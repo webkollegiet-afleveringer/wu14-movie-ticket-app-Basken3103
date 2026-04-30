@@ -130,7 +130,9 @@ function Home() {
           <span className="home__see-all">See all</span>
         </div>
 
-        <div className="home__cinema-list">
+        <div className="checkout__section main-padding-left-right"></div>
+
+        <div className="home__cinema-list main-padding-left-right">
           {cinemas.map((cinema) => (
             <article className="cinema-card" key={cinema.id}>
               <img
@@ -140,7 +142,7 @@ function Home() {
               />
 
               <div className="cinema-card__content">
-                <p className="cinema-card__distance">📍 {cinema.distance}</p>
+                <p className="cinema-card__distance">📍{cinema.distance}</p>
                 <h3 className="cinema-card__title">{cinema.name}</h3>
                 <p className="cinema-card__time">{cinema.closingTime}</p>
               </div>

@@ -57,7 +57,7 @@ function Details() {
 
   return (
     <section className="details">
-      <header className="details__header">
+      <header className="details__header header">
         <button className="details__icon-button">←</button>
         <h1 className="details__title">Details Movie</h1>
         <button className="details__icon-button">🔖</button>

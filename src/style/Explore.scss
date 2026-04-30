@@ -17,6 +17,13 @@ body {
     cursor: pointer;
   }
 
+  &__movie {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+
+  }
+
 
   &__tab-btn--active {
     background: #68b6ff;
@@ -70,14 +77,12 @@ body {
 
 
 .movie-card {
-  flex: 0 0 auto;
-
-  &--large {
-    width: 168px;
+  &__large {
+    width: 100px;
 
   }
 
-  &--small {
+  &__small {
     width: 112px;
   }
 

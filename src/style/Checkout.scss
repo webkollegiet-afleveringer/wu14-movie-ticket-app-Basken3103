@@ -1,6 +1,6 @@
 .checkout {
     min-height: 100vh;
-    padding: 24px 20px 40px;
+    //padding: 24px 20px 40px;
 
     &__title {
         margin: 0;
@@ -13,7 +13,6 @@
         color: #8e95a5;
         font-size: 0.95rem;
         font-weight: 400;
-        margin-left: 325px;
     }
 
     &__card {
@@ -133,16 +132,6 @@
         color: #c7ccd7;
     }
 
-    &__button {
-        width: 90%;
-        margin-top: 30px;
-        border: none;
-        border-radius: 1rem;
-        background: #63b2f4;
-        color: #ffffff;
-        padding: 16px;
-    }
-
     &__button-text {
         font-size: 1rem;
         font-weight: 700;
@@ -166,25 +155,24 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    /*Skal have hjælp til den her*/
+    .checkout__button {
+        display: block;
+        width: 90%;
+        margin-top: 0.5rem;
+        padding: 1.15rem 1rem;
+        border: none;
+        border-radius: 1rem;
+        background: #63b2f4;
+        text-align: center;
+        margin-bottom: 30px;
+        color: white;
+    }
+
+
+
     //TODO
     /*Kigger på det med grid derhjemme, da det er noget som jeg har brug for at læse op på*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

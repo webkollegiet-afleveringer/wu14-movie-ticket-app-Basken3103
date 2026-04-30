@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 function Settings() {
 
   return (
-    <section className="settings">
+    <section className="settings main-padding-left-right">
       <Header title="Settings" />
 
       {/*Profile*/}

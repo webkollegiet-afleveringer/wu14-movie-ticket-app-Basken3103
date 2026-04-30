@@ -16,7 +16,7 @@ function SavedPlan() {
   console.log(movieData)
 
   return (
-    <section className="saved-plan">
+    <section className="saved-plan main-padding-left-right">
       <Header title="Saved Plan" />
 
       {/*Overskrift 1*/}

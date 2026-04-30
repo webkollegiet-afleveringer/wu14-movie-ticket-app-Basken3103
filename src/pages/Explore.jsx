@@ -59,13 +59,15 @@ function Explore() {
 
   return (
     <section className="explore">
-      <header className="explore__movie"></header>
-      <span className="explore__icon-btn"><FaChevronLeft /></span>
-      <h1 className="explore__title">Explore Movie</h1>
-      <span className="explore__icon-btn"><FaSearch /></span>
+      <header className="explore__movie header">
+        <span className="explore__icon-btn"><FaChevronLeft /></span>
+        <h1 className="explore__title">Explore Movie</h1>
+        <span className="explore__icon-btn"><FaSearch /></span>
+
+      </header>
 
 
-      <div className="explore__tabs">
+      <div className="explore__tabs main-padding-left-right">
         <button className="tab-btn tab-btn--active">Now Showing</button>
         <button className="tab-btn">Upcoming</button>
       </div>
@@ -75,18 +77,18 @@ function Explore() {
         <span>See more</span>
       </div>
 
-      <div className="movie-row movie-row--large">
+      <div className="movie-row movie-row__large">
         {topMovies.slice(0, 5).map((movie) => (
           <Link
             to={`/details/${movie.id}`}
             key={movie.id}
             className="movie-link"
           >
-            <article className="movie-card movie-card--large">
+            <article className="movie-card movie-card__large main-padding-left-right">
               <img
                 src={`${baseImgUrl}${movie.poster_path}`}
                 alt={movie.title}
-                className="movie-card__image movie-card__image--large"
+                className="movie-card__image movie-card__image__large"
               />
               <h3 className="movie-card__title">{movie.title}</h3>
               <p className="movie-card__rating">★★★★★</p>
