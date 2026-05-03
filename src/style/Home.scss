@@ -1,0 +1,200 @@
+.home {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #10141f 0%, #151927 100%);
+  padding: 24px 20px 100px;
+  color: white;
+  font-family: sans-serif;
+
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 24px;
+  }
+
+  &__welcome {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__greeting {
+    color: #9fa5b4;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  &__username {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  &__avatar-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // SEARCH
+
+  &__search {
+    background: #2c313d;
+    border-radius: 16px;
+    padding: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__search-input {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__search-icon {
+    color: #9fa5b4;
+  }
+
+  // SECTIONS
+
+  &__section {
+    margin-bottom: 32px;
+  }
+
+  &__section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__section-title {
+    font-size: 25px;
+    margin-left: 20px;
+
+  }
+
+  &__see-all {
+    color: #9fa5b4;
+    font-size: 14px;
+    margin-top: 36px;
+  }
+
+  // FEATURED MOVIE
+
+  &__featured-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__featured-image {
+    width: 90%;
+    height: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__featured-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 25px;
+    margin-bottom: 10px;
+  }
+
+  &__featured-date {
+    color: #9fa5b4;
+    font-size: 16px;
+    margin-left: 25px;
+
+  }
+
+  // CINEMA LIST
+
+  &__cinema-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+// CINEMA CARD
+
+.cinema-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  &__image {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__distance {
+    color: #6aa8ff;
+    font-size: 12px;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__time {
+    color: #9fa5b4;
+    font-size: 12px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__star {
+    color: gold;
+  }
+}
+
+// BOTTOM NAV
+
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 2250px;
+  margin: 0 auto;
+  background: #111827;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 16px 30px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .active {
+    background-color: #6aa8ff;
+  }
+}

@@ -1,0 +1,178 @@
+.checkout {
+    min-height: 100vh;
+    //padding: 24px 20px 40px;
+
+    &__title {
+        margin: 0;
+        font-size: 1.15rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    &__change {
+        color: #8e95a5;
+        font-size: 0.95rem;
+        font-weight: 400;
+    }
+
+    &__card {
+        width: 90%;
+        border-radius: 1.6rem;
+        overflow: hidden;
+        background: linear-gradient(135deg, #4ea8ee 0%, #3ea1eb 45%, #2a8fe4 100%);
+    }
+
+    &__card-top {
+        min-height: 60px;
+        padding: 18px 18px 16px;
+        /*Brug andet display flex her*/
+        background:
+            linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0 28%, transparent 28% 100%),
+            linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0 38%, transparent 38% 100%),
+            linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0 48%, transparent 48% 100%),
+    }
+
+    /*Mangler html til kort ikonet*/
+    &__card-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    &__circle {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: inline-block;
+
+        &--red {
+            background: #ea001b;
+        }
+
+        &--yellow {
+            background: #f6a623;
+            margin-left: -6px;
+        }
+    }
+
+    &__balance {
+        text-align: right;
+    }
+
+    &__balance-label {
+        margin: 0 0 6px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    &__balance-value {
+        margin: 0;
+        font-size: 1.25rem;
+    }
+
+    &__card-bottom {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__label {
+        display: block;
+        margin: 0 0 8px;
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    &__value {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    &__card-number {
+        margin: 0;
+        font-size: 0.98rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+    }
+
+    &__field {
+        margin-bottom: 16px;
+    }
+
+    &__row {
+        display: flex;
+        gap: 16px;
+
+        .checkout__field {
+            flex: 1;
+            margin-bottom: 0;
+        }
+    }
+
+    &__input-wrapper {
+        position: relative;
+    }
+
+    &__input {
+        width: 90%;
+        box-sizing: border-box;
+        padding: 16px 18px;
+        border: 1px solid #4f5564;
+        border-radius: 0.95rem;
+        background: transparent;
+        color: #b2b5bb;
+        font-size: 0.98rem;
+        font-family: inherit;
+    }
+
+    &__arrow {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #c7ccd7;
+    }
+
+    &__button-text {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    &__divider {
+        width: 1px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.75);
+        margin: 0 18px;
+    }
+
+    &__price {
+        min-width: 78px;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    &__checkout-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*Skal have hjælp til den her*/
+    .checkout__button {
+        display: block;
+        width: 90%;
+        margin-top: 0.5rem;
+        padding: 1.15rem 1rem;
+        border: none;
+        border-radius: 1rem;
+        background: #63b2f4;
+        text-align: center;
+        margin-bottom: 30px;
+        color: white;
+    }
+
+
+
+    //TODO
+    /*Kigger på det med grid derhjemme, da det er noget som jeg har brug for at læse op på*/
+
+
+}
